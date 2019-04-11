@@ -18,11 +18,11 @@ public class Task07Main {
         try {
             processor.process();
             return NONE;
-        } catch (IOException e) {
-            return CHECKED;
+        } catch (RuntimeException e) {
+            return UNCHECKED;
         }
         catch (Exception e) {
-            return UNCHECKED;
+            return CHECKED;
         }
     }
 
